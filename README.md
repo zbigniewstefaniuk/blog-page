@@ -1,8 +1,8 @@
 <br />
-<h1 align="center"> Task for rcrutation to Landingi Componay - Junior Developer </h1>
+<h1 align="center">Recrutation task to Landingi Companay - Junior Developer </h1>
 
 
-<p align="center">sApp using React and Redux</p>
+<p align="center">App using React and Redux</p>
 
 1. Clone the repo
 ```sh
