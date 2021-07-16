@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 //* Routes
 import ROUTES from './app/utils/routes';
@@ -13,21 +13,23 @@ import './App.css';
 
 function App() {
   return (
-    <Router>
-      <Layout>
-        <Switch>
-          <Route exact path={ROUTES.home}>
-            <Home />
-          </Route>
-          <Route path={ROUTES.about}>
-            <About />
-          </Route>
-          <Route path={ROUTES.post}>
-            <Posts />
-          </Route>
-        </Switch>
-      </Layout>
-    </Router>
+    <>
+      <Router>
+        <Layout>
+          <Switch>
+            <Route exact path={ROUTES.home}>
+              <Home />
+            </Route>
+            <Route path={ROUTES.about}>
+              <About />
+            </Route>
+            <Route path={ROUTES.post}>
+              <Posts />
+            </Route>
+          </Switch>
+        </Layout>
+      </Router>
+    </>
   );
 }
 
