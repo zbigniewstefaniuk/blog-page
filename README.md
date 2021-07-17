@@ -1,8 +1,11 @@
 <br />
-<h1 align="center">Recrutation task to Landingi Companay - Junior Developer </h1>
+<h1 align="center">Recrutation task to Landingi Companay </h1>
 
 
-<p align="center">App using React and Redux</p>
+
+<p align="center">App using React and Redux / Redux-toolkit </p>
+<p align="center">Basitc website with routes - home, contact, aboout
+User also can see posts, oon click can see details with coomments and he can even add own comment and add poost to favorites</p>
 
 1. Clone the repo
 ```sh

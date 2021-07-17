@@ -7,6 +7,13 @@
   margin: 3rem 0;
   -webkit-box-shadow: 4px 24px 40px #cccccc;
           box-shadow: 4px 24px 40px #cccccc;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.postContainer:hover {
+  -webkit-box-shadow: 4px 24px 40px #8b8b8b;
+          box-shadow: 4px 24px 40px #8b8b8b;
 }
 
 a:link, a {

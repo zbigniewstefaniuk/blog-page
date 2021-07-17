@@ -6,8 +6,11 @@
     width: 55rem;
     margin: 3rem 0;
     box-shadow: 4px 24px 40px #cccccc;
+    transition: all 0.2s ease-in-out;
 
-
+    &:hover {
+        box-shadow: 4px 24px 40px #8b8b8b;  
+    }
 }
 
 a:link, a {

@@ -8,8 +8,6 @@ const Posts = () => {
   // @ts-ignore
   const { postIdx = 1 }: { postId: number | undefined } = location?.state;
   const { data = [], isFetching } = useFetchPostWithCommentsQuery(postIdx);
-  console.log(data);
-  console.log(isFetching);
 
   const renderComments = ({
     id: commentID,
@@ -21,15 +19,13 @@ const Posts = () => {
     name: string;
     email: string;
     body: string;
-  }) => {
-    return (
-      <div key={commentID}>
-        <span>{name}</span>
-        <span>{email}</span>
-        <p>{comment}</p>
-      </div>
-    );
-  };
+  }): JSX.Element => (
+    <div key={commentID}>
+      <span>{name}</span>
+      <span>{email}</span>
+      <p>{comment}</p>
+    </div>
+  );
 
   const isThereComments = isFetching ? 'Laoding coomments...' : data?.map(renderComments);
   return <div>{isThereComments}</div>;
