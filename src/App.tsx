@@ -10,6 +10,7 @@ import About from './app/pages/About';
 import Posts from './app/pages/Posts';
 import Layout from './app/components/layout/Layout';
 import Contact from './app/pages/Contact';
+import Favoritues from './app/pages/Favoritues';
 import './App.css';
 
 function App() {
@@ -28,6 +29,9 @@ function App() {
           </Route>
           <Route path={ROUTES.post}>
             <Posts />
+          </Route>
+          <Route path={ROUTES.favoritues}>
+            <Favoritues />
           </Route>
         </Switch>
       </Layout>

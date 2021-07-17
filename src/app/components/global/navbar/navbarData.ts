@@ -5,6 +5,10 @@ const NavbarData = {
     title: 'Home',
     url: ROUTES.home,
   },
+  favoritues: {
+    title: 'Favoritues',
+    url: ROUTES.favoritues,
+  },
   about: {
     title: 'About',
     url: ROUTES.about,

@@ -3,6 +3,7 @@ const ROUTES = {
   about: '/about',
   post: '/post',
   contact: '/contact',
+  favoritues: '/favoritues',
 };
 
 export default ROUTES;

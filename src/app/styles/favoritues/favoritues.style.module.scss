@@ -1,0 +1,32 @@
+.favorituesMain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f0f2f5;
+    height: calc(100vh - 70px);
+}
+
+.favPostContainer {
+    margin: 2rem 0 ;
+    width: 80%;
+    background-color: #fff;
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+    box-shadow: 4px 24px 40px #cccccc;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        box-shadow: 4px 24px 40px #919191;  
+    }
+}
+
+a:link, a {
+    text-decoration: none;
+    &:visited {
+        color: inherit;
+    }
+}
+
+.favPost {
+}

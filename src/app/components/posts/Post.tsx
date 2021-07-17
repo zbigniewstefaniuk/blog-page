@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import { useFetchPostCommentsQuery, useFetchSinglePostQuery } from '../../features/posts-api-slice';
+import { useFetchPostCommentsQuery } from '../../features/posts-api-slice';
 import { useAppDispatch, useAppSelector } from '../../store/hooks';
 import { addComment } from '../../features/add-comment/post-add-comment';
+import { addToFavorite } from '../../features/favourites/favourites';
 import Input from '../atoms/Input';
 import styles from '../../styles/posts/post.style.module.css';
+import SinglePost from './SinglePost';
 
 const Post = () => {
   const location = useLocation();
-  const [input, setInput] = useState('');
+  const [input, setInput] = useState<string>('');
+  const [postAddedToFav, setPostAddedToFav] = useState<boolean>(false);
 
   //   Controliing state
   const userComments = useAppSelector((state) => state.addComment);
@@ -55,6 +58,12 @@ const Post = () => {
     dispatch(addComment({ postId: postIdx, body: input }));
   };
 
+  const handleAddToFavorites = () => {
+    setPostAddedToFav(!postAddedToFav);
+    dispatch(addToFavorite({ postId: postIdx }));
+  };
+
+  const isPostAddedMessage = postAddedToFav && 'Post has been added  to favoritues';
   return (
     <section>
       <div className={styles.post}>
@@ -69,37 +78,11 @@ const Post = () => {
             <Input inputText={input} setInputText={setInput} onSubmit={handleAddComment} label="Add your comment!" />
           </div>
         </div>
+        <button onClick={handleAddToFavorites}>Add This Post To Favotite</button>
+        <p>{isPostAddedMessage}</p>
       </div>
     </section>
   );
-};
-
-const SinglePost = ({ postIdx }: { postIdx: number }) => {
-  const { data: postData = {}, isFetching: isPostFetching, isError } = useFetchSinglePostQuery(postIdx);
-  const {
-    userId,
-    title,
-    body,
-  }: {
-    userId: number;
-    title: string;
-    body: string;
-  } = postData;
-  const renderPost = (
-    <div>
-      <h1>Post Title: {title}</h1>
-      <hr />
-      <span>{body}</span>
-    </div>
-  );
-
-  const isPost = isPostFetching
-    ? 'Loadding  post...'
-    : isError
-    ? 'Something went wrong we could now load post'
-    : renderPost;
-
-  return <div>{isPost}</div>;
 };
 
 export default Post;
