@@ -3,6 +3,8 @@ import { useFetchPostsQuery } from '../../features/posts-api-slice';
 import User from './User';
 
 import styles from '../../styles/home/post.styles.module.css';
+import { Link } from 'react-router-dom';
+import ROUTES from '../../utils/routes';
 
 const PostsList = () => {
   const { data = [], isFetching } = useFetchPostsQuery();
@@ -19,13 +21,23 @@ const PostsList = () => {
     body: string;
   }): JSX.Element => {
     return (
-      <div key={id} className={styles.postContainer}>
-        <div className={styles.postContainerHeader}>
-          <User userId={userId} />
-          <h1 className={styles.postContainerTitle}>{title}</h1>
+      <Link
+        key={id}
+        to={{
+          pathname: ROUTES.post,
+          state: {
+            postIdx: id,
+          },
+        }}
+      >
+        <div className={styles.postContainer}>
+          <div className={styles.postContainerHeader}>
+            <User userId={userId} />
+            <h1 className={styles.postContainerTitle}>{title}</h1>
+          </div>
+          <p className={styles.postDescription}>{body}</p>
         </div>
-        <p className={styles.postDescription}>{body}</p>
-      </div>
+      </Link>
     );
   };
 
