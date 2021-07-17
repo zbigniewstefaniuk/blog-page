@@ -5,6 +5,16 @@
     height: auto;
     width: 55rem;
     margin: 3rem 0;
+    box-shadow: 4px 24px 40px #cccccc;
+
+
+}
+
+a:link, a {
+    text-decoration: none;
+    &:visited {
+        color: inherit;
+    }
 }
 
 .postContainerHeader {
@@ -15,6 +25,8 @@
 .postContainerTitle {
     margin-left: 1rem;
     text-align: start;
+    text-transform:capitalize;
+    font-size: 1.25rem
 }
 
 .postDescription {
