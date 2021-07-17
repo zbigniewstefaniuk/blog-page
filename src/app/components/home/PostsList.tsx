@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import ROUTES from '../../utils/routes';
 
 const PostsList = () => {
-  const { data = [], isFetching } = useFetchPostsQuery();
+  const { data = [], isFetching, isError } = useFetchPostsQuery();
 
   const renderPosts = ({
     userId,
@@ -42,7 +42,13 @@ const PostsList = () => {
   };
 
   const isData = isFetching ? 'Loading...' : data.map(renderPosts);
-  return <div>{isData}</div>;
+  return (
+    <div>
+      <h1>Latests Posts</h1>
+      {isData} <br />
+      {isError && 'Sorry something went wrong and we could not load posts'}
+    </div>
+  );
 };
 
 export default PostsList;

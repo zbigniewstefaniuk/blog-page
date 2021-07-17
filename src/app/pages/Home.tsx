@@ -5,7 +5,6 @@ import styles from '../styles/home/home.styles.module.css';
 const Home = () => {
   return (
     <div className={styles.root}>
-      Home Page with posts
       <PostsList />
     </div>
   );

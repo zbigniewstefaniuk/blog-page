@@ -1,0 +1,23 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content:center;
+    margin: 1rem 0;
+    width: 80%;
+    label {
+        font-size: .75rem;
+        margin-bottom: .25rem;
+    }
+        .headerSearch{
+            width: 100%;
+            padding: 10px;
+            outline: none;
+            border-radius: 8px;
+            outline: none;
+            border: none;
+        }
+        input:focus {
+            outline:none;
+        }
+    }
