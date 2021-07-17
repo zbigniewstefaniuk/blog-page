@@ -55,8 +55,15 @@ export const apiSlice = createApi({
         },
       }),
 
+      //   Getting All posts
+      fetchSinglePost: builder.query<Posts, number | void>({
+        query(id = 1) {
+          return `posts/${id}`;
+        },
+      }),
+
       //   Get single post with comments - defalut id = 1
-      fetchPostWithComments: builder.query<PostComments, number | void>({
+      fetchPostComments: builder.query<PostComments, number | void>({
         query(id = 1) {
           return `posts/${id}/comments`;
         },
@@ -71,4 +78,4 @@ export const apiSlice = createApi({
   },
 });
 
-export const { useFetchPostsQuery, useFetchUserQuery, useFetchPostWithCommentsQuery } = apiSlice;
+export const { useFetchPostsQuery, useFetchUserQuery, useFetchPostCommentsQuery, useFetchSinglePostQuery } = apiSlice;
