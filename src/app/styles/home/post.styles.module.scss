@@ -1,0 +1,23 @@
+.postContainer{
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 1em;
+    height: auto;
+    width: 55rem;
+    margin: 3rem 0;
+}
+
+.postContainerHeader {
+    display:flex;
+    align-items: center;
+}
+
+.postContainerTitle {
+    margin-left: 1rem;
+    text-align: start;
+}
+
+.postDescription {
+    margin-top: 2rem;
+    word-wrap: wrap;
+}

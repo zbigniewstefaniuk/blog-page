@@ -13,23 +13,21 @@ import './App.css';
 
 function App() {
   return (
-    <>
-      <Router>
-        <Layout>
-          <Switch>
-            <Route exact path={ROUTES.home}>
-              <Home />
-            </Route>
-            <Route path={ROUTES.about}>
-              <About />
-            </Route>
-            <Route path={ROUTES.post}>
-              <Posts />
-            </Route>
-          </Switch>
-        </Layout>
-      </Router>
-    </>
+    <Router>
+      <Layout>
+        <Switch>
+          <Route exact path={ROUTES.home}>
+            <Home />
+          </Route>
+          <Route path={ROUTES.about}>
+            <About />
+          </Route>
+          <Route path={ROUTES.post}>
+            <Posts />
+          </Route>
+        </Switch>
+      </Layout>
+    </Router>
   );
 }
 

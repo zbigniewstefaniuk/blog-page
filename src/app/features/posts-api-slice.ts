@@ -1,12 +1,44 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
-const API_URL = 'https://jsonplaceholder.typicode.com/posts';
+const API_URL = 'https://jsonplaceholder.typicode.com/';
 
 interface Posts {
   userId: number;
   id: number;
   title: string;
   body: string;
+}
+
+interface PostComments {
+  postId: number;
+  id: number;
+  name: string;
+  email: string;
+  body: string;
+}
+
+interface User {
+  id: number;
+  name: string;
+  username: string;
+  email: string;
+  address: {
+    street: string;
+    suite: string;
+    city: string;
+    zipcode: string;
+    geo: {
+      lat: string;
+      lng: string;
+    };
+  };
+  phone: string;
+  website: string;
+  company: {
+    name: string;
+    catchPhrase: string;
+    bs: string;
+  };
 }
 
 export const apiSlice = createApi({
@@ -19,18 +51,24 @@ export const apiSlice = createApi({
       //   Getting All posts
       fetchPosts: builder.query<Posts[], number | void>({
         query() {
-          return `/`;
+          return `posts/`;
         },
       }),
 
-      //   Get single post with defalut id = 1
-      fetchPost: builder.query<Posts, number | void>({
+      //   Get single post with comments - defalut id = 1
+      fetchPostWithComments: builder.query<PostComments, number | void>({
         query(id = 1) {
-          return `/${id}`;
+          return `posts/${id}/comments`;
+        },
+      }),
+
+      fetchUser: builder.query<User, number | void>({
+        query(id = 1) {
+          return `users/${id}`;
         },
       }),
     };
   },
 });
 
-export const { useFetchPostsQuery, useFetchPostQuery } = apiSlice;
+export const { useFetchPostsQuery, useFetchUserQuery, useFetchPostWithCommentsQuery } = apiSlice;
