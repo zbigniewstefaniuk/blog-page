@@ -1,0 +1,39 @@
+section {
+  background-color: #f0f2f5;
+  width: 100%;
+  height: calc(100vh - 70px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.post {
+  background-color: #fff;
+  width: 70%;
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+}
+
+.post .commentsTitle {
+  margin-top: 1.25rem;
+}
+
+.post .commentsContainer {
+  margin-top: 2rem;
+}
+
+.post .commentsContainer .commentBody {
+  font-size: 12px;
+  margin: .5rem 0;
+}
+/*# sourceMappingURL=post.style.module.css.map */

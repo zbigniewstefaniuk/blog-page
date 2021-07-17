@@ -1,0 +1,31 @@
+$fontSize: 12px;
+
+section {
+    background-color: #f0f2f5;
+    width: 100%;
+    height: calc(100vh - 70px);  // height - navbar height
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.post {
+    background-color: #fff;
+    width: 70%;
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+
+    .commentsTitle {
+        margin-top: 1.25rem;
+    }
+
+    .commentsContainer {
+        margin-top: 2rem;
+        
+
+        .commentBody {
+            font-size: $fontSize;
+            margin: .5rem 0;
+        }
+    }
+}
