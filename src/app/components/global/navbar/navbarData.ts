@@ -9,9 +9,9 @@ const NavbarData = {
     title: 'About',
     url: ROUTES.about,
   },
-  post: {
-    title: 'Post',
-    url: ROUTES.post,
+  contact: {
+    title: 'Contact',
+    url: ROUTES.contact,
   },
 };
 

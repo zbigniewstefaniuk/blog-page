@@ -9,6 +9,7 @@ import Home from './app/pages/Home';
 import About from './app/pages/About';
 import Posts from './app/pages/Posts';
 import Layout from './app/components/layout/Layout';
+import Contact from './app/pages/Contact';
 import './App.css';
 
 function App() {
@@ -21,6 +22,9 @@ function App() {
           </Route>
           <Route path={ROUTES.about}>
             <About />
+          </Route>
+          <Route path={ROUTES.contact}>
+            <Contact />
           </Route>
           <Route path={ROUTES.post}>
             <Posts />
