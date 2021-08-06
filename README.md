@@ -9,11 +9,11 @@ User also can see posts, oon click can see details with coomments and he can eve
 
 1. Clone the repo
 ```sh
-git clone https://github.com/zbigniewstefaniuk/landingi-task
+git clone https://github.com/zbigniewstefaniuk/blog-page
 ```
 2. Navvigate to folder
 ```sh
-cd landingi-task
+cd blog-page
 ```
 3. Install dependencies
 ```sh
