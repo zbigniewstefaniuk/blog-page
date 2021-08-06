@@ -1,5 +1,5 @@
 <br />
-<h1 align="center">Recrutation task to Landingi Companay </h1>
+<h1 align="center">Simple blog made with redux-toolkit</h1>
 
 
 
